@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 893809009}
   - component: {fileID: 893809008}
   - component: {fileID: 893809007}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sol (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -438,10 +438,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227616813}
+  - component: {fileID: 1227616816}
   - component: {fileID: 1227616814}
   - component: {fileID: 1227616817}
-  - component: {fileID: 1227616816}
   - component: {fileID: 1227616818}
+  - component: {fileID: 1227616815}
   m_Layer: 0
   m_Name: Personnage
   m_TagString: Player
@@ -457,7 +458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227616812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.1, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 1540488206}
@@ -515,6 +516,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1227616815
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227616812}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0}
+  m_Size: {x: 5.27, y: 6.89}
+  m_Direction: 0
 --- !u!114 &1227616816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,8 +547,52 @@ MonoBehaviour:
   rb: {fileID: 1227616817}
   vitesse: 2
   maxJump: 13
-  isGrounded: 0
   animator: {fileID: 298665522}
+  GroundedBelowFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 1
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 512
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 89
+    maxNormalAngle: 91
+  GroundedLeftFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 1
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 512
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: -1
+    maxNormalAngle: 1
+  GroundedRightFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 1
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 512
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 179
+    maxNormalAngle: 181
+  IsGroundedBelow: 0
+  IsGroundedLeft: 0
+  IsGroundedRight: 0
   isAlive: 1
   isAllowedToMove: 1
 --- !u!50 &1227616817
@@ -599,7 +660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1540488206
 Transform:
   m_ObjectHideFlags: 0
@@ -637,7 +698,7 @@ GameObject:
   - component: {fileID: 1697955434}
   - component: {fileID: 1697955433}
   - component: {fileID: 1697955432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sol
   m_TagString: Ground
   m_Icon: {fileID: 0}

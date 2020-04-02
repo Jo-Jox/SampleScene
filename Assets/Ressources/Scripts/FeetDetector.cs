@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FeetDetector : MonoBehaviour
 {
+#if false
 	private CharacBehavior cB;
     // Start is called before the first frame update
     void Start()
@@ -24,4 +25,5 @@ public class FeetDetector : MonoBehaviour
         	cB.isGrounded = false;
         }
     }
+#endif
 }
